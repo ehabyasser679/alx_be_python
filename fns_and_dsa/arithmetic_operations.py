@@ -5,7 +5,7 @@ OPERATIONS = {
     "multiply": mul,
     "divide": truediv
 }
-def perform_operation(num1: float, num2: float, operation: str):
+def perform_operation(num1, num2, operation):
     if operation not in OPERATIONS:
         raise ValueError(f"Invalid operation: {operation}")
     if operation == "divide" and num2 == 0:
