@@ -35,14 +35,14 @@ def main():
     while True:
         choice = display_menu()
         if choice == "1":
-            name = input("Enter the name of the shopping list: ").strip()
+            name = input("Enter the item to add: ").strip()
             if name:
                 add_shopping_list(name)
                 print("Added.")
             else:
                 print("Name cannot be empty.")
         elif choice == "2":
-            name = input("Enter the name to remove: ").strip()
+            name = input("Enter the item to remove: ").strip()
             if name:
                 remove_shopping_list(name)
         elif choice == "3":
@@ -56,4 +56,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
