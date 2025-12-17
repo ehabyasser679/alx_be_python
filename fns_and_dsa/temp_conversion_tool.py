@@ -10,8 +10,8 @@ def convert_to_fahrenheit(celsius):
 def main():
     while True:
         try:
-            temperature = float(input("Enter the temperature: "))
-            type_of_temperature = input("Is the temperature in Celsius or Fahrenheit? ")
+            temperature = float(input("Enter the temperature to convert: "))
+            type_of_temperature = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
 
             if type_of_temperature.lower() == "celsius":
                 fahrenheit = convert_to_fahrenheit(temperature)
