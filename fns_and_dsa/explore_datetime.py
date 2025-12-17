@@ -7,8 +7,8 @@ def display_current_datetime():
     print(f"Current date and time: {current_date}")
 
 def calculate_future_date(number_of_days: int):
-    future = datetime.now() + timedelta(days=number_of_days)
-    future_date = future.strftime("%Y-%m-%d %H:%M:%S")
+    future_date = datetime.now() + timedelta(days=number_of_days)
+    future_date = future_date.strftime("%Y-%m-%d %H:%M:%S")
     print(f"Future date: {future_date}")
 
 def main():
