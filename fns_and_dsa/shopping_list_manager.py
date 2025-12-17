@@ -1,4 +1,4 @@
-list_of_shopping_lists = []
+shopping_list = []
 
 def display_menu():
     print("Shopping List Manager")
@@ -10,25 +10,25 @@ def display_menu():
 
 
 def add_shopping_list(name: str):
-    list_of_shopping_lists.append(name)
-    return list_of_shopping_lists
+    shopping_list.append(name)
+    return shopping_list
 
 
 def remove_shopping_list(name: str):
     try:
-        list_of_shopping_lists.remove(name)
+        shopping_list.remove(name)
     except ValueError:
         print(f"'{name}' not found in shopping lists.")
-    return list_of_shopping_lists
+    return shopping_list
 
 
 def display_shopping_lists():
-    if not list_of_shopping_lists:
+    if not shopping_list:
         print("No shopping lists.")
     else:
-        for i, item in enumerate(list_of_shopping_lists, 1):
+        for i, item in enumerate(shopping_list, 1):
             print(f"{i}. {item}")
-    return list_of_shopping_lists
+    return shopping_list
 
 
 def main():
