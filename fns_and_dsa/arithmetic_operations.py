@@ -1,13 +1,18 @@
-from operator import add, sub, mul, truediv
-OPERATIONS = {
-    "add": add,
-    "subtract": sub,
-    "multiply": mul,
-    "divide": truediv
-}
 def perform_operation(num1, num2, operation):
-    if operation not in OPERATIONS:
-        raise ValueError(f"Invalid operation: {operation}")
-    if operation == "divide" and num2 == 0:
-        raise ZeroDivisionError("Cannor divide by zero")
-    return OPERATIONS[operation](num1, num2)
+    match operation:
+        case "add":
+            return num1 + num2
+        
+        case "subtract":
+            return num1 - num2
+        
+        case "multiply":
+            return num1 * num2
+
+        case "divide":
+            if num2 == 0:
+                raise ZeroDivisionError("Cannot divide by zero")
+            else:
+                return num1 / num2
+        case _:
+            raise ValueError("Invalid operation")
