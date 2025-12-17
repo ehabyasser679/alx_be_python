@@ -15,7 +15,7 @@ def main():
     display_current_datetime()
     
     try:
-        number_of_days = int(input("Enter a number of days to look ahead: "))
+        number_of_days = int(input("Enter the number of days to add to the current date: "))
         calculate_future_date(number_of_days)
     except ValueError:
         print("Please enter a valid whole number for the days.")
