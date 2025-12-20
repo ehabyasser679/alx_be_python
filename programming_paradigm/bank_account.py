@@ -40,7 +40,7 @@ class BankAccount:
             return self._account_balance
     
     def display_balance(self):
-        print("Current balance is: ", self._account_balance)
+        print("Current Balance: ${self._account_balance:,.2f}")
         return self._account_balance
     
     
