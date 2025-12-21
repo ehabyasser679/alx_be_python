@@ -12,7 +12,6 @@ class BankAccount:
             return 0
         
         self.account_balance -= amount
-        print(f"Withdrew: ${float(amount):.1f}")
         return self.account_balance
     
     def display_balance(self):
