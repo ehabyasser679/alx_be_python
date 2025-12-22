@@ -6,7 +6,7 @@ def safe_divide(numerator, denominator) -> Union[float, str]:
 		num = float(numerator)
 		den = float(denominator)
 	except (ValueError, TypeError):
-		return "Error: non-numeric input"
+		return "Error: Please enter numeric values only."
 
 	try:
 		return f"The result of the division is {num / den}"
@@ -15,4 +15,5 @@ def safe_divide(numerator, denominator) -> Union[float, str]:
 
 
 __all__ = ["safe_divide"]
+
 
