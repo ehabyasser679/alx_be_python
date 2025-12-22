@@ -11,8 +11,9 @@ def safe_divide(numerator, denominator) -> Union[float, str]:
 	try:
 		return num / den
 	except ZeroDivisionError:
-		return "Error: division by zero"
+		return "Error: Cannot divide by zero."
 
 
 __all__ = ["safe_divide"]
+
 
