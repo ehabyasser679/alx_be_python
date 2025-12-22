@@ -9,12 +9,13 @@ def safe_divide(numerator, denominator) -> Union[float, str]:
 		return "Error: Please enter numeric values only."
 
 	try:
-		return num / den
+		return "The result of the division is", num / den
 	except ZeroDivisionError:
 		return "Error: Cannot divide by zero."
 
 
 __all__ = ["safe_divide"]
+
 
 
 
