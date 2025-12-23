@@ -3,11 +3,12 @@ class Book:
         self.title = title
         self.author = author
         self._is_checked_out = _is_checked_out
-        def check_out(self):
-            if not self._is_checked_out:
-                self._is_checked_out = True
-                return True
-            return False
+    
+    def check_out(self):
+        if not self._is_checked_out:
+            self._is_checked_out = True
+            return True
+        return False
         
 class Library:
     def __init__(self, books):
