@@ -16,15 +16,16 @@ class PrintBook(Book):
         self.page_count = page_count
 
 class Library():
-    def __init__(self,books):
+    def __init__(self, books):
         self.books = []
-        for book in books:
-            if isinstance(book, EBook):
-                self.books.append(EBook(book.title, book.author, book.file_size))
-            elif isinstance(book, PrintBook):
-                self.books.append(PrintBook(book.title, book.author, book.page_count))
-            else:
-                self.books.append(Book(book.title, book.author))
+        if books:
+            for book in books:
+                if isinstance(book, EBook):
+                    self.books.append(EBook(book.title, book.author, book.file_size))
+                elif isinstance(book, PrintBook):
+                    self.books.append(PrintBook(book.title, book.author, book.page_count))
+                else:
+                    self.books.append(Book(book.title, book.author))
 
     def add_book(self, book):
         self.books.append(book)
