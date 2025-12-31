@@ -9,6 +9,12 @@ class Book:
             self._is_checked_out = True
             return True
         return False
+    
+    def return_book(self):
+        if self._is_checked_out:
+            self._is_checked_out = False
+            return True
+        return False
         
 class Library:
     def __init__(self):
