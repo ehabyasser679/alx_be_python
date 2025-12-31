@@ -15,7 +15,7 @@ class PrintBook(Book):
         super().__init__(title, author)
         self.page_count = page_count
 
-class library():
+class Library():
     def __init__(self,books):
         self.books = []
         for book in books:
